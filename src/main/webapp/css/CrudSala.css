@@ -1,0 +1,124 @@
+
+
+/*SIEMPRE COMENZAR CON ESTO EN CSS*/
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+body{
+	
+	background-image: url("https://assets.hongkiat.com/uploads/minimalist-dekstop-wallpapers/4k/original/10.jpg");
+    -webkit-backdround-size: cover;
+    background-size: cover; 
+     opacity: 0.87;
+   height: 900px;
+   
+    
+}
+
+
+
+
+.contenedor{
+	margin-top:165px;
+	padding:40px;
+		background-color: #484343 ;
+		
+	 height: 700px;
+	   border-radius: 10px;
+    opacity: 3;
+}
+
+
+
+
+
+.container > h1{
+	color:white;
+	font-family: 'Agdasima', sans-serif;
+	font-size: 48px;
+	text-align: center;
+}
+
+
+.container input[type=text] {
+  background-color: #1E1919  ;
+  color:  #FFFFFF;
+   border: none;
+}
+
+
+
+
+.container label {
+		font-family: 'Agdasima', sans-serif;
+	color:#FDFDFD;
+	font-size: 25px;
+	 font-weight: 100;
+    line-height: 10px;
+}
+
+
+
+.principal{
+	width:1200px;
+}
+
+.principal .boton{
+		   outline: none;
+       border: none;
+
+  background: #0BC839;
+    border-radius: 10px;
+  cursor: pointer;
+margin-bottom:10px;
+    width:90px;
+    height:40px;
+	 font-family: 'Agdasima', sans-serif;
+ font-size: 20px;
+}
+
+
+
+.principal .boton:hover{
+	
+background: #189B38;
+    transition: background-color 1s ease-in-out;
+}
+
+
+
+.table{
+	color:white;
+
+}
+
+
+.table:hover{
+	background-color: 9BA49D ;
+	color:#000;
+}
+
+
+table  th{
+	font-family: 'Agdasima', sans-serif;
+	background-color: #2AC256 ;
+	 font-size: 19px;
+	 
+}  
+
+
+
+table  button{
+	background-color: #2AC256 ;
+} 
+
+
+
+

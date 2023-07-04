@@ -1,0 +1,231 @@
+
+
+
+
+/*SIEMPRE COMENZAR CON ESTO EN CSS*/
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+body{
+
+/* Chrome 10-25, Safari 5.1-6 */
+background-image: url("https://wallpapercosmos.com/w/full/b/a/9/1209998-3840x2160-desktop-4k-glow-in-the-dark-background-photo.jpg") ;
+    -webkit-backdround-size: cover;
+    background-size: cover; 
+     opacity: 0.87;
+   height: 1000px;
+
+    
+}
+
+
+.contenedor{
+	
+
+	margin-top:165px;
+	padding:40px;
+		    background-color: #181A21;
+		width:100%;
+	 height: 900px;
+	   border-radius: 10px;
+    opacity: 3;
+}
+
+
+
+
+
+
+
+
+
+.contenedor h1{
+	
+	color:white;
+	font-family: 'Agdasima', sans-serif;
+	font-size: 48px;
+	text-align: center;
+	 font-weight: 500;
+    line-height: 10px;
+	
+	
+	
+	
+}
+
+
+
+
+.contenedor  .row   .azul{
+	
+	
+	font-size: 20px;
+	color: #1999ff;
+	 text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Agdasima', sans-serif;
+	
+}
+
+.contenedor  .row .control-label{
+	font-size: 18px;
+	    color: #afafaf;
+    font-weight: 500;
+    font-family: 'Agdasima', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .02em;
+    user-select: none;
+}
+
+
+
+.container input[type=text] {
+  background-color: #32353c  ;
+  color:  #FFFFFF;
+   border: none;
+       border-radius: 2px;
+           outline: none;
+    font-size: 15px;
+    grid-area: input;
+    border: 1px solid #32353c;
+}
+
+
+
+
+.row .combo{
+	
+   color: #fff;
+  background-color:  #403836;	
+}
+
+.oneCombo select:hover {
+  color: #000;
+  background: #fff;
+  /* hover on select */
+}
+
+
+
+
+.table tbody button{
+	width: 60px;
+		font-family: 'Lato', sans-serif;
+	color:white;
+	background-color:#47ABCB  ;
+	font-size: 15px;
+	 font-weight: 100;
+    line-height: 10px;
+}
+
+
+
+.table tbody button:hover {
+	width: 60px;
+		font-family: 'Lato', sans-serif;
+	color:white;
+	background-color:#598D9E   ;
+	font-size: 15px;
+	 font-weight: 100;
+    line-height: 10px;
+}
+
+
+
+
+#id_btn_filtro{
+	   outline: none;
+       border: none;
+  
+  background: linear-gradient(90deg, #06BFFF 0%, #2D73FF 100%);
+    border-radius: 10px;
+  cursor: pointer;
+  height:30px;
+ display: flex;
+  justify-content: center;
+  align-items: center;
+    width:100px;
+	 font-family: 'Agdasima', sans-serif;
+ font-size: 20px;
+}
+
+
+
+.row #id_btn_filtro:hover{
+	
+background: linear-gradient(90deg, #06BFFF 0%, #2D73FF 20%);
+    transition: background-color 2s ease-in-out;
+}
+
+
+
+
+
+.table tbody{
+		font-family: 'Lato', sans-serif;
+	color:white;
+	font-size: 15px;
+	 font-weight: 700;
+    line-height: 25px;
+}
+
+
+.table  tbody:hover{
+	background-color: 9BA49D ;
+	color:#000;
+		font-size: 15px;
+	 font-weight: 700;
+    line-height: 10px;
+}
+
+
+#id_div_modal_detalle input[type=text] {
+  background-color: #FFFFFF   ;
+  color:  #0A0A0A ;
+   border: none;
+       border-radius: 2px;
+           outline: none;
+    font-size: 15px;
+    grid-area: input;
+    border: 1px solid #32353c;
+}
+
+
+
+.table thead tr{
+	font-size: 15px;
+	    color: #FFFFFF ;
+    font-weight: 500;
+    font-family: 'Agdasima', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    user-select: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
