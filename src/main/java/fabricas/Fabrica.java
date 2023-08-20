@@ -45,8 +45,23 @@ public abstract class Fabrica {
 	
 	
 	public abstract TesisDAO getTesisDAO();
-	public abstract DevolucionDAO getDevolucionDAO();
+
+	
+	
+	
+	//transacccion prestamo 
 	public abstract PrestamoDAO getPrestamoDAO();
+	
+	
+	
+	
+	//transaccion devolucion
+	
+	public abstract DevolucionDAO getDevolucionDAO();
+	
+	
+	
+
 	public abstract SeparacionDAO getSeparacionDAO();
 	
 	

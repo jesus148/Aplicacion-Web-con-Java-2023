@@ -82,7 +82,7 @@ public class MySqlRevistaDAO implements RevistaDAO {
 				objRevista.setFechaCreacion(rs.getDate(4));
 				objRevista.setFechaRegistro(rs.getTimestamp(5));		
 				objRevista.setEstado(rs.getInt(6));
-				objRevista.setFechaFormateada(FechaUtil.getFechaFormateadaYYYYMMdd(rs.getDate(4)));
+				objRevista.setFechaFormateada(FechaUtil.getFechaFormateadaYYYYMMdd(rs.getDate(4))   );
 				
 				objModalidad = new Modalidad();
 				objModalidad.setIdModalidad(rs.getInt(7));

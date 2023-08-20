@@ -3,6 +3,9 @@ package entity;
 import java.util.Date;
 import java.util.List;
 
+
+import java.sql.Timestamp;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,9 +13,9 @@ import lombok.Setter;
 @Setter
 public class Devolucion {
 
-	private int idDevolucion;
+	private int idDevolucion , idAlumno ,idUsuario;
 	private Date fechaRegistro;
-	private Date fechaDevolucion;
+	private Timestamp fechaDevolucion;
 	private int estado;
 	private Usuario usuario;
 	private List<DevolucionHasLibro> detallesDevolucion;

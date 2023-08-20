@@ -11,6 +11,9 @@ import entity.PrestamoHasLibroPK;
 
 public interface PrestamoDAO {
 
+	
+	//ESTE DAO TAMBIEN LO USAREMOS EN transaccion devolucion para buscar alumno y libro 
+	
 
 	public ArrayList<Libro> consultaCliente(String filtro);
 	public ArrayList<Alumno> consultaXNombre(String filtro);

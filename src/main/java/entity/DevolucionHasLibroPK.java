@@ -1,6 +1,7 @@
 package entity;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -12,5 +13,7 @@ public class DevolucionHasLibroPK  implements Serializable{
 
 	private int idDevolucion;
 	private int idLibro;
+	private int estado;
+	private Timestamp fechaDevolucion;
 
 }

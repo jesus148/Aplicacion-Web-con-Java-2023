@@ -19,6 +19,10 @@ import entity.Alumno;
 
 import fabricas.Fabrica;
 
+
+//SERVELT PARA BUSCAR ALUMNO 
+
+
 @WebServlet("/buscaAlumno")
 public class BuscarAlumnoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -35,8 +39,9 @@ public class BuscarAlumnoServlet extends HttpServlet {
 		Fabrica fabrica = Fabrica.getFabrica(Fabrica.MYSQL);
 		PrestamoDAO dao = fabrica.getPrestamoDAO();
 		
-		ArrayList<Alumno> lista = dao.consultaXNombre("%" + filtro );
+		ArrayList<Alumno> lista = dao.consultaXNombre("%" + filtro + "%");
 		
+	//DATOS DE VUELTA
 		Gson gson = new Gson();
 		String json = gson.toJson(lista);
 

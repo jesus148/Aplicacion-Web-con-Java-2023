@@ -6,21 +6,31 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import dao.PrestamoDAO;
 import entity.Alumno;
 import entity.Libro;
 import entity.Prestamo;
-import entity.PrestamoHasLibro;
+
 import entity.PrestamoHasLibroPK;
 import util.MySqlDBConexion;
-import java.util.Date;
 
 public class MySqlPrestamoDAO implements PrestamoDAO {
 	
+	
+	private static Logger log = Logger.getLogger(MySqlPrestamoDAO.class.getName());
+	
 
+	
+	
+	//BUSCA LIBRO 
 	@Override
 	public ArrayList<Libro> consultaCliente(String filtro) {
+		
+		
+		//imprimie consola el valor de la variable
+		log.info("---> En MyALUMNO-> consultaLibro ->" + filtro);
 
 		
 		ArrayList<Libro> data = new ArrayList<Libro>();
@@ -34,9 +44,13 @@ public class MySqlPrestamoDAO implements PrestamoDAO {
 				pstm.setString(1, (filtro));
 		
 			
+				
+				//imprime el valor de la varibale junta con la consulta
+				log.info("---> SQL -> " + pstm);
 			ResultSet rs = pstm.executeQuery();
 			
 			while(rs.next()){
+				//desembolsa en orden segun el orden que aparece en msysql al ejecutar la consulta
 				bean = new Libro();
 				bean.setIdLibro(rs.getInt("idLibro"));
 				bean.setTitulo(rs.getString("titulo"));
@@ -60,11 +74,18 @@ public class MySqlPrestamoDAO implements PrestamoDAO {
 
 	}
 
+	
+	
+	
+	// BUSCA ALUMNO
 	@Override
 	public ArrayList<Alumno> consultaXNombre(String filtro) {
 		
 		
+		log.info("---> En MyALUMNO-> consultaAlumno ->" + filtro);
 		
+		
+		//SE ALMACENA TODA LA DATA DE ALUMNOS
 		ArrayList<Alumno> data = new ArrayList<Alumno>();
 		Alumno bean = null;
 		Connection conn = null;
@@ -74,13 +95,17 @@ public class MySqlPrestamoDAO implements PrestamoDAO {
 			conn = MySqlDBConexion.getConexion();
 			 sql ="select * from alumno where  nombres like ? ";
 					pstm = conn.prepareStatement(sql);
-					pstm.setString(1, filtro + "%");
+					pstm.setString(1, (filtro) );
+				
 					
 					
-			
+					log.info("---> SQL -> " + pstm);
 					
+					//se almacena toda la data
 			ResultSet rs = pstm.executeQuery();
 			
+			//DESENVOLSAMOS EN ORDEN LA DATA
+			//los atributos deben ser iguales al la tabla en orden
 			while(rs.next()){
 				bean = new Alumno();
 				bean.setIdAlumno(rs.getInt("idAlumno"));
@@ -112,6 +137,18 @@ public class MySqlPrestamoDAO implements PrestamoDAO {
 	}
 
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	@Override
 	public int inserta(Prestamo boletaBean, List<PrestamoHasLibroPK> lstDetalle) {
 		int contador = -1;
@@ -138,7 +175,7 @@ public class MySqlPrestamoDAO implements PrestamoDAO {
 			pstm2 =  conn.prepareStatement(sql2);
 			ResultSet rs = pstm2.executeQuery();
 			rs.next();
-			int idPrestamo = rs.getInt(1);
+			//int idPrestamo = rs.getInt(1);
 			
 			//se inserta el detalle de boleta
 			String sql3 ="INSERT INTO prestamo_tiene_libro (idPrestamo, idLibro) VALUES (?, ?)";

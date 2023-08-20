@@ -54,6 +54,10 @@ public class FabricaMysql extends Fabrica {
 	public EditorialDAO getEditorialDAO() {		return new MySqlEditorialDAO(); 	}
 	public PrestamoDAO getPrestamoDAO() {		return new MySqlPrestamoDAO(); 	}
 	public SeparacionDAO getSeparacionDAO() {	return new MySqlSeparacionDAO(); 	}
+	
+	
+	
+	//devolucion DAO osea el modelo
 	public DevolucionDAO getDevolucionDAO() {	return new MySqlDevolucionDAO(); 	}
 
 	

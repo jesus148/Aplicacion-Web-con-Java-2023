@@ -12,6 +12,15 @@ public class FechaUtil {
 		return sdf.format(fecha);
 	}
 	
+
+	
+	//APLICA FORMATO 
+	public static String getFechaFormateadaYYYYMMddDate(Date fecha) {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd"); //Brinda formato a la fecha
+		return sdf.format(fecha);
+	}
+	
+	
 	public static Date toFecha(String fecha) {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		Date fec = null;
